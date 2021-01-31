@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 
+import App from './App';
+import { BrowserRouter as Router } from "react-router-dom";
 // import { creatBrowserHistory } from 'history';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 // const history = creatBrowserHistory();
 ReactDOM.render(
   //<React.StrictMode>
+  <Router>
+    <CssBaseline />
+    <App />,
+</Router>,
 
-  <App />,
 
 
   //</React.StrictMode>,

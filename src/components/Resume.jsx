@@ -30,13 +30,15 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.secondary.main,
     },
     oppositeContent: {
-        flex: 0.03
+        flex: 0.03,
+        padding: 0
     },
     dashtext: {
         fontStyle: "italic"
     },
     button: {
-        margin: theme.spacing(3),
+        margin: theme.spacing(1.5),
+        marginTop: theme.spacing(11),
     },
 
 }));
@@ -76,13 +78,12 @@ const Resume = () => {
                                     </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="h6" component="h1">
+                                        <Typography variant="body" component="h3" >
                                             Northcoders coding bootcamp, Trainee
                                             </Typography>
-                                        <Typography>
+                                        <Typography variant="body">
                                             • Built experiences to work in pairs and groups remotely as well as TDD development.
-                                            </Typography>
-                                        <Typography>
+                                            <br />
                                             • Developed skills to be a professional JavaScript software engineer systematically.
                                             </Typography>
 
@@ -110,21 +111,19 @@ const Resume = () => {
                                 </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="h6" component="h1">
+                                        <Typography variant="body" component="h3">
                                             Xinlung Group Ltd, Accommodation advisor
                                             </Typography>
-                                        <Typography>• Self-learned Python to improve work efficiency:
-                                                <Typography className={classes.dashtext}>
+                                        <Typography variant="body">• Self-learned Python to improve work efficiency:<br />
+                                            <Typography variant="body" className={classes.dashtext}>
                                                 - Used Python script to download structured data from multiple web pages and converting into Excel format;
-                                                </Typography>
-                                            <Typography className={classes.dashtext}>
-                                                - Used Python-Wechat API to send notification messages to certain students automatically.
-                                                </Typography>
-                                        </Typography>
-                                        <Typography>
-                                            • Provided high level of customer service while achieving the sales targets. Received zero complain. Helped the company to build positive reputation.
+                                                <br />
+                                                - Used Python-Wechat API to send notification messages to certain students automatically.<br />
                                             </Typography>
-                                        <Typography>
+                                        </Typography>
+                                        <Typography variant="body">
+                                            • Provided high level of customer service while achieving the sales targets. Received zero complain. Helped the company to build positive reputation.
+                                            <br />
                                             • Built and executed two email marketing campaigns to raise students’ awareness on products and sales events(e.g. live stream). 23% of the students booked accommodation with us afterwards.
                                             </Typography>
                                     </Paper>
@@ -151,16 +150,14 @@ const Resume = () => {
                                 </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="h6" component="h1">
+                                        <Typography variant="body" component="h3">
                                             the University of Manchester, BSc. Fashion Marketing
                                                     </Typography>
-                                        <Typography>
+                                        <Typography variant="body">
                                             • Achieved 2-2 honor degree.
-                                                        </Typography>
-                                        <Typography>
+                                            <br />
                                             • Worked as financial manager in the final year project of starting a business.
-                                                         </Typography>
-                                        <Typography>
+                                            <br />
                                             • Grasp multiple software including InDesign, Photoshop, Illustrator and Microsoft Office.
                                                         </Typography>
                                     </Paper>
@@ -188,10 +185,10 @@ const Resume = () => {
 
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="h6" component="h1">
+                                        <Typography variant="body" component="h3">
                                             New College Durham, BTEC Level 3
                                                     </Typography>
-                                        <Typography>• Achieved triple grade Distinction* Distinction* Distinction</Typography>
+                                        <Typography variant="body">• Achieved triple grade Distinction* Distinction* Distinction</Typography>
 
                                     </Paper>
                                 </Box>
@@ -218,10 +215,10 @@ const Resume = () => {
 
                                 <Box m={1} >
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="h6" component="h1">
+                                        <Typography variant="body" component="h3">
                                             Durham Johnston School, GCSE
                                                     </Typography>
-                                        <Typography>• English: C, Maths: A*, Additional Maths: B</Typography>
+                                        <Typography variant="body">• English: C, Maths: A*, Additional Maths: B</Typography>
 
                                     </Paper>
                                 </Box>
