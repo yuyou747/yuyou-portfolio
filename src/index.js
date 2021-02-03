@@ -11,8 +11,8 @@ ReactDOM.render(
   //<React.StrictMode>
   <Router>
     <CssBaseline />
-    <App />,
-</Router>,
+    <App />
+  </Router>,
 
 
 

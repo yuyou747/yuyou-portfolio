@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Particles from "react-tsparticles";
 
 let params = {
-
-
     particles: {
         number: {
             value: 0,
@@ -118,7 +116,7 @@ let params = {
     retina_detect: true,
     background: {
         color: "#000000",
-        image: "",
+
         position: "50% 50%",
         repeat: "no-repeat",
         size: "cover",
@@ -131,7 +129,7 @@ let params = {
 class Particle extends Component {
     render() {
         return (
-            <div >
+            <div>
                 <Particles width="100vw" height="100vh" params={params} />
             </div>
         );

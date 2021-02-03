@@ -20,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
 
+
     },
     header: {
         width: '100%',
+        backgroundColor: '#212121',
+
 
     },
     menuButton: {
@@ -36,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     headerButtons: {
         color: "white",
         fontSize: 14,
-        //fontWeight: "bold",
+        fontWeight: "bold",
     },
     homeButton: {
         color: "white",
@@ -54,7 +57,7 @@ const Header = (props) => {
     const open = Boolean(anchorEl);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    console.log(props, 'props')
+
 
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
@@ -93,7 +96,7 @@ const Header = (props) => {
         <div className={classes.root}>
             {isMobile ? (
 
-                <AppBar className={classes.header}>
+                <AppBar className={classes.header} >
                     <Grid container justify="center"
                         alignItems="center">
                         <Grid item xs={11}>
@@ -141,7 +144,7 @@ const Header = (props) => {
                     </Grid>
                 </AppBar>
             ) : (
-                    <AppBar position="static">
+                    <AppBar position="static" className={classes.header}>
                         <Grid container justify="center"
                             alignItems="center">
                             <Grid item sm={11} xl={9}>

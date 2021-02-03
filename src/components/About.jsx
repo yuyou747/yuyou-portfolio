@@ -67,7 +67,7 @@ const About = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'))
 
     return (
-        <div>
+        <div backgroundColor='#cfcfcf'>
 
 
             <div>
@@ -89,7 +89,7 @@ const About = () => {
                         <Paper className={classes.paper}  >
 
                             <Typography paragraph className={classes.h6}>
-                                I'm Yuyou, I recently graduated from Northcoders bootcamp where I developed my coding skills. Now I am ready to step into the programming world and explore more.
+                                Hi! My name is Yuyou, I recently graduated from Northcoders bootcamp where I developed my coding skills. Now I am ready to step into the programming world and explore more.
                              </Typography>
 
                             <Typography paragraph className={classes.h6}>

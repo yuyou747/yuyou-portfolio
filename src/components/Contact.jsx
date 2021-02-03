@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     contactMe: {
         fontSize: 20,
         marginBottom: theme.spacing(3),
+        fontWeight: 'bold'
     },
     socialMedia: {
         display: "flex",
