@@ -2,25 +2,16 @@ import "../../node_modules/react-modal-video/scss/modal-video.scss";
 import Link from '@material-ui/core/Link';
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Button, Grid, Tooltip } from '@material-ui/core';
+import { Grid, Tooltip } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
-
 import ModalVideo from 'react-modal-video'
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -83,9 +74,9 @@ const Portfolio = () => {
                             <React.Fragment>
 
                                 <Tooltip title="Watch Demo">
-                                    <IconButton aria-label="Watch Demo" >
+                                    <IconButton aria-label="Watch Demo" onClick={() => setOpen(true)} >
 
-                                        <OndemandVideoIcon className={classes.icons} onClick={() => setOpen(true)} />
+                                        <OndemandVideoIcon className={classes.icons} />
                                     </IconButton>
                                 </Tooltip>
                                 <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="CawFeitBxUk" onClose={() => setOpen(false)} />

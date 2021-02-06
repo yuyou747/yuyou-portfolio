@@ -8,12 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
-
-
-
-
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,7 +61,7 @@ const About = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('xs'))
 
     return (
-        <div backgroundColor='#cfcfcf'>
+        <div>
 
 
             <div>

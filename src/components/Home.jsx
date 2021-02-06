@@ -5,8 +5,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useTheme } from '@material-ui/core/styles';
 import Particles from "./Particles";
 import Typist from 'react-typist';
-import { TextField } from '@material-ui/core';
-import Particle from './Particles';
+
 
 const useStyles = makeStyles((theme) => ({
 

@@ -40,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1.5),
         marginTop: theme.spacing(11),
     },
-
+    title: {
+        fontWeight: 'bold',
+        fontSize: 16
+    }
 }));
 
 const Resume = () => {
@@ -78,10 +81,10 @@ const Resume = () => {
                                     </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="body" component="h3" >
+                                        <Typography variant="body2" className={classes.title} >
                                             Northcoders coding bootcamp, Trainee
                                             </Typography>
-                                        <Typography variant="body">
+                                        <Typography variant="body2">
                                             • Built experiences to work in pairs and groups remotely as well as TDD development.
                                             <br />
                                             • Developed skills to be a professional JavaScript software engineer systematically.
@@ -104,28 +107,30 @@ const Resume = () => {
                             <TimelineContent>
                                 <Typography variant="body2" color="textSecondary">
                                     09/2019 - 06/2020
-                                            <Typography variant="body2" color="textSecondary">
-                                        Work Experience
-                                            </Typography>
+                                    <br />
+                                    Work Experience
+
 
                                 </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="body" component="h3">
+                                        <Typography variant="body2" className={classes.title}>
                                             Xinlung Group Ltd, Accommodation advisor
                                             </Typography>
-                                        <Typography variant="body">• Self-learned Python to improve work efficiency:<br />
-                                            <Typography variant="body" className={classes.dashtext}>
-                                                - Used Python script to download structured data from multiple web pages and converting into Excel format;
-                                                <br />
-                                                - Used Python-Wechat API to send notification messages to certain students automatically.<br />
-                                            </Typography>
+                                        <Typography variant="body2">
+                                            • Self-learned Python to improve work efficiency:<br />
                                         </Typography>
-                                        <Typography variant="body">
+                                        <Typography variant="body2" className={classes.dashtext}>
+                                            - Used Python script to download structured data from multiple web pages and converting into Excel format;
+                                            <br />
+                                            - Used Python-Wechat API to send notification messages to certain students automatically.<br />
+                                        </Typography>
+
+                                        <Typography variant="body2">
                                             • Provided high level of customer service while achieving the sales targets. Received zero complain. Helped the company to build positive reputation.
                                             <br />
                                             • Built and executed two email marketing campaigns to raise students’ awareness on products and sales events(e.g. live stream). 23% of the students booked accommodation with us afterwards.
-                                            </Typography>
+                                        </Typography>
                                     </Paper>
                                 </Box>
                             </TimelineContent>
@@ -144,16 +149,16 @@ const Resume = () => {
                             <TimelineContent>
                                 <Typography variant="body2" color="textSecondary">
                                     2016-2019
-                                            <Typography variant="body2" color="textSecondary">
-                                        Education
-                                            </Typography>
+                                    <br />
+                                    Education
+
                                 </Typography>
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="body" component="h3">
+                                        <Typography variant="body2" className={classes.title}>
                                             the University of Manchester, BSc. Fashion Marketing
                                                     </Typography>
-                                        <Typography variant="body">
+                                        <Typography variant="body2">
                                             • Achieved 2-2 honor degree.
                                             <br />
                                             • Worked as financial manager in the final year project of starting a business.
@@ -178,17 +183,19 @@ const Resume = () => {
                             <TimelineContent>
                                 <Typography variant="body2" color="textSecondary">
                                     2013-2015
-                                            <Typography variant="body2" color="textSecondary">
-                                        Education
-                                            </Typography>
+                                    <br />
+                                    Education
+
                                 </Typography>
 
                                 <Box m={1}>
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="body" component="h3">
+                                        <Typography variant="body2" className={classes.title}>
                                             New College Durham, BTEC Level 3
-                                                    </Typography>
-                                        <Typography variant="body">• Achieved triple grade Distinction* Distinction* Distinction</Typography>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            • Achieved triple grade Distinction* Distinction* Distinction
+                                        </Typography>
 
                                     </Paper>
                                 </Box>
@@ -208,17 +215,17 @@ const Resume = () => {
                             <TimelineContent>
                                 <Typography variant="body2" color="textSecondary">
                                     2008-2012
-                                            <Typography variant="body2" color="textSecondary">
+                                    <br />
                                         Education
-                                            </Typography>
+
                                 </Typography>
 
                                 <Box m={1} >
                                     <Paper elevation={3} className={classes.paper}>
-                                        <Typography variant="body" component="h3">
+                                        <Typography variant="body2" className={classes.title}>
                                             Durham Johnston School, GCSE
                                                     </Typography>
-                                        <Typography variant="body">• English: C, Maths: A*, Additional Maths: B</Typography>
+                                        <Typography variant="body2">• English: C, Maths: A*, Additional Maths: B</Typography>
 
                                     </Paper>
                                 </Box>
@@ -265,9 +272,9 @@ const Resume = () => {
                                         <TimelineOppositeContent>
                                             <Typography variant="body2" color="textSecondary">
                                                 09/2019 - 06/2020
-                                            <Typography variant="body2" color="textSecondary">
-                                                    Work Experience
-                                            </Typography>
+                                                <br />
+                                                Work Experience
+
 
                                             </Typography>
                                         </TimelineOppositeContent>
@@ -283,17 +290,17 @@ const Resume = () => {
                                                     <Typography variant="h6" component="h1">
                                                         Xinlung Group Ltd, Accommodation advisor
                                                     </Typography>
-                                                    <Typography>• Self-learned Python to improve work efficiency:
-                                                        <Box ml={2}>
-                                                            <Typography className={classes.dashtext}>
-                                                                - Used Python script to download structured data from multiple web pages and converting into Excel format;
+                                                    <Typography>• Self-learned Python to improve work efficiency:</Typography>
+                                                    <Box ml={2}>
+                                                        <Typography className={classes.dashtext}>
+                                                            - Used Python script to download structured data from multiple web pages and converting into Excel format;
                                                         </Typography>
-                                                            <Typography className={classes.dashtext}>
-                                                                - Used Python-Wechat API to send notification messages to certain students automatically.
+                                                        <Typography className={classes.dashtext}>
+                                                            - Used Python-Wechat API to send notification messages to certain students automatically.
                                                         </Typography>
-                                                        </Box>
+                                                    </Box>
 
-                                                    </Typography>
+
                                                     <Typography>
                                                         • Provided high level of customer service while achieving the sales targets. Received zero complain. Helped the company to build positive reputation.
                                                     </Typography>
@@ -308,9 +315,9 @@ const Resume = () => {
                                         <TimelineOppositeContent>
                                             <Typography variant="body2" color="textSecondary">
                                                 2016-2019
-                                            <Typography variant="body2" color="textSecondary">
-                                                    Education
-                                            </Typography>
+                                                <br />
+                                                Education
+
                                             </Typography>
                                         </TimelineOppositeContent>
                                         <TimelineSeparator>
@@ -343,9 +350,9 @@ const Resume = () => {
                                         <TimelineOppositeContent>
                                             <Typography variant="body2" color="textSecondary">
                                                 2013-2015
-                                            <Typography variant="body2" color="textSecondary">
+                                                <br />
                                                     Education
-                                            </Typography>
+
                                             </Typography>
                                         </TimelineOppositeContent>
                                         <TimelineSeparator>
@@ -373,9 +380,9 @@ const Resume = () => {
                                         <TimelineOppositeContent>
                                             <Typography variant="body2" color="textSecondary">
                                                 2008-2012
-                                            <Typography variant="body2" color="textSecondary">
+                                                <br />
                                                     Education
-                                            </Typography>
+
                                             </Typography>
                                         </TimelineOppositeContent>
                                         <TimelineSeparator>

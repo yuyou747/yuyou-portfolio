@@ -9,7 +9,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 import Link from '@material-ui/core/Link';
-import { useForm, FormProvider, useFormContext, Controller } from 'react-hook-form';
+import { useForm, FormProvider, Controller } from 'react-hook-form';
 const useStyles = makeStyles((theme) => ({
     inputBox: {
         width: '90%',
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 const Contact = (props) => {
     const classes = useStyles();
 
-    const { register, handleSubmit, control, errors, reset } = useForm({
+    const { handleSubmit, control, errors, reset } = useForm({
         criteriaMode: "all",
         mode: "onChange",
 

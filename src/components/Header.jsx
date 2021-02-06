@@ -14,7 +14,7 @@ import Contact from './Contact';
 import Home from './Home';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
-import { Link, Route, Switch, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
