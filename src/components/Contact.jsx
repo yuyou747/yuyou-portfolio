@@ -7,9 +7,12 @@ import { Button } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
 import Link from '@material-ui/core/Link';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { useForm, FormProvider, Controller } from 'react-hook-form';
+
 const useStyles = makeStyles((theme) => ({
     inputBox: {
         width: '90%',
@@ -44,18 +47,55 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+
+
 const Contact = (props) => {
     const classes = useStyles();
+    const [openSuccess, setOpenSuccess] = React.useState(false);
+    const [openFail, setOpenFail] = React.useState(false);
+    const [requesting, setRequesting] = React.useState(false);
 
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenSuccess(false);
+        setOpenFail(false);
+    };
     const { handleSubmit, control, errors, reset } = useForm({
         criteriaMode: "all",
         mode: "onChange",
 
     });
-    console.log(errors);
     const onSubmit = (data) => {
-        console.log(data);
-        reset()
+        setRequesting(true);
+        const postData = {
+            "email": data.emailAddress,
+            "lastname": data.lastName,
+            "firstname": data.firstName,
+            "organization": data.organization,
+            "message": data.message
+        }
+        console.log("data", data);
+        fetch('https://api.angelayuyou.com/dev/contact', {
+            method: 'post',
+            body: JSON.stringify(postData)
+        }).then((response) => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+            setOpenSuccess(true);
+            setRequesting(false);
+            reset()
+        }).catch(err => {
+            setOpenFail(true);
+            setRequesting(false);
+        })
     };
 
     return (
@@ -159,18 +199,33 @@ const Contact = (props) => {
                             {...props}
                         />
 
-                        <Button variant="contained"
-                            color="secondary"
-                            onClick={handleSubmit(onSubmit)}
-                            startIcon={<SendIcon>send</SendIcon>}
-                            className={classes.button}>
-                            Submit
-                    </Button>
+                        {!requesting
+                            ?
+                            <Button variant="contained"
+                                color="secondary"
+                                onClick={handleSubmit(onSubmit)}
+                                startIcon={<SendIcon>send</SendIcon>}
+                                className={classes.button}>
+                                Submit
+                            </Button>
+                            :
+                            <CircularProgress />
+                        }
                         {/* </Grid> */}
 
                     </Grid>
                 </form>
             </FormProvider>
+            <Snackbar open={openSuccess} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success">
+                    Thanks you for contacting me. I have received your message!
+                </Alert>
+            </Snackbar>
+            <Snackbar open={openFail} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="error">
+                    I think I messed up my API, again. Please contact me on Linkin
+                </Alert>
+            </Snackbar>
             <div className={classes.socialMedia}>
                 <Link href="https://github.com/yuyou747" >
                     <GitHubIcon className={classes.icons} color="secondary" />
