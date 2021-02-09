@@ -12,7 +12,9 @@ import Typography from '@material-ui/core/Typography';
 import { Grid, Tooltip } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
-import ModalVideo from 'react-modal-video'
+import ModalVideo from 'react-modal-video';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 600,
@@ -33,12 +35,14 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
     }
 }));
+const image = [
 
+];
 
 const Portfolio = () => {
     const classes = useStyles();
     const [isOpen, setOpen] = useState(false)
-
+    const [imgIsOpen, setImgOpen] = useState(false)
     return (
         <div className={classes.screen} >
             <Grid container direction="row"
@@ -106,11 +110,22 @@ const Portfolio = () => {
                             title="Yuyou Yu"
                         />
                         <CardContent>
+
                             <Typography variant="body2" color="textSecondary" paragraph>
-                                This is my personal website that built with react and material ui.
-                        </Typography>
+                                This is my personal website built with React and Material UI. AWS was used as backend.
+                                <Link onClick={() => setImgOpen(true)}>
+                                    Click to view the backend structure.
+                                </Link>
+                                {!!imgIsOpen && (
+                                    <Lightbox
+                                        mainSrc={'/backend-structure.png'}
+                                        onCloseRequest={() => setImgOpen(false)}
+
+                                    />)}
+                            </Typography>
+
                             <Typography variant="body1" color="textSecondary" component="p">
-                                JavaScript |  React  | Material UI
+                                JavaScript | React | Material UI | AWS
                         </Typography>
                         </CardContent>
                         <CardActions disableSpacing>

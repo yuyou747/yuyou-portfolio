@@ -99,13 +99,9 @@ const About = () => {
                                 On my spare times, I like to stroke my cat, Scone; hiking without my cat, Scone, and playing with makeup and
                                 face paints.
                             </Typography>
-
-
-
-
-
                         </Paper>
                     </Grid>
+
                 </Grid>
 
             </div>
