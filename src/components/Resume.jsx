@@ -59,7 +59,8 @@ const Resume = () => {
                     variant="contained"
                     color="default"
                     className={classes.button}
-                    endIcon={<Icon><GetAppIcon></GetAppIcon></Icon>} href="/YuyouYuCvNew.pdf" download="YuyouYuCv.pdf"
+                    endIcon={<Icon><GetAppIcon></GetAppIcon></Icon>} href="https://yuyou-profile-website.s3.eu-west-2.amazonaws.com/YuyouYuCvNew.pdf
+                    " download="YuyouYuCv.pdf"
                 >Download my CV </Button>
             </Grid>
             {isMobile ? (
